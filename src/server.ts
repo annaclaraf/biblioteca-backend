@@ -1,5 +1,7 @@
 import express from 'express'; //importando o express
 
+import "./database"; //importando o banco de dados
+
 const app = express()
 
 app.get("/", (req, res) =>{
