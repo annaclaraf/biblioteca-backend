@@ -1,19 +1,12 @@
 import express from 'express'; //importando o express
 
+import { routes } from "./routes";
 import "./database"; //importando o banco de dados
 
 const app = express()
 
-app.get("/", (req, res) =>{
-    return res.json({
-        message: "rota get"
-    })
-})
+app.use(express.json())
 
-app.post("/", (req, res) =>{
-    return res.json({
-        message: "rota post"
-    })
-})
+app.use(routes)
 
 app.listen(3333, () => console.log("server is runing"))
