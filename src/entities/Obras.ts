@@ -16,6 +16,9 @@ class Obras {
     @Column()
     foto: string;
 
+    @Column()
+    autores: string;
+
     constructor(){
         if(!this.id){
             this.id = uuid()
